@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
@@ -42,10 +41,10 @@ class JwtControllerTest {
     @Test
     public void testGenerateToken() throws Exception {
 
-        System.out.println(new BCryptPasswordEncoder().encode("123456"));
+//        System.out.println(new BCryptPasswordEncoder().encode("pass"));
 
-        String username = "tony";
-        String password = "123456";
+        String username = "user";
+        String password = "pass";
 
         User user = new User();
         user.setUsername(username);
